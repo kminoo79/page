@@ -10,6 +10,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
+app.get('/test', function (req, res) {
+  res.sendFile(path.join(__dirname, '../client/build/test.html'));
+});
+
 app.get('/hello', (req, res) => res.send('Hello World!'))
 
 http.listen(80, function () {
